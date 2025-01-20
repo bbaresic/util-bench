@@ -37,6 +37,21 @@ To get the same version that I am using, look into the `.prototools` file.
 | deepEqualOld - differentTypes | 306.08 ± 0.30%       | 292.00                  | 3441048 ± 0.01%            | 3424658                       | 3267075     |
 | deepEqual - differentTypes    | 299.52 ± 0.57%       | 291.00                  | 3641159 ± 0.01%            | 3436426                       | 3338722     |
 
+| **Task Name**                 | **Latency Avg (ns)** | **Latency Median (ns)** | **Throughput Avg (ops/s)** | **Throughput Median (ops/s)** | **Samples** |
+| ----------------------------- | -------------------- | ----------------------- | -------------------------- | ----------------------------- | ----------- |
+| mergeDeepOld - array          | 562.25 ± 0.58%       | 500.00                  | 1935958 ± 0.01%            | 2000000                       | 1778564     |
+| mergeDeep - array             | 327.58 ± 0.80%       | 292.00                  | 3421012 ± 0.01%            | 3424658                       | 3052650     |
+| mergeDeepOld - deepNested     | 1613.95 ± 0.85%      | 1417.00                 | 684271 ± 0.03%             | 705716                        | 619600      |
+| mergeDeep - deepNested        | 1518.31 ± 0.69%      | 1375.00                 | 703170 ± 0.02%             | 727273                        | 658629      |
+| mergeDeepOld - large          | 537988.92 ± 0.57%    | 520709.00               | 1876 ± 0.35%               | 1920                          | 1859        |
+| mergeDeep - large             | 89401.23 ± 0.76%     | 82562.50 ± 20.50        | 11603 ± 0.21%              | 12112 ± 3                     | 11186       |
+| mergeDeepOld - nested         | 2009.20 ± 0.72%      | 1875.00                 | 526159 ± 0.02%             | 533333                        | 497711      |
+| mergeDeep - nested            | 1072.80 ± 0.64%      | 1000.00                 | 984056 ± 0.01%             | 1000000                       | 932145      |
+| mergeDeepOld - simple         | 810.24 ± 0.21%       | 791.00                  | 1271587 ± 0.01%            | 1264223                       | 1234205     |
+| mergeDeep - simple            | 358.76 ± 0.38%       | 333.00                  | 2961781 ± 0.01%            | 3003003                       | 2787397     |
+| mergeDeepOld - differentTypes | 829.02 ± 0.45%       | 791.00                  | 1263291 ± 0.01%            | 1264222                       | 1206249     |
+| mergeDeep - differentTypes    | 444.14 ± 0.52%       | 417.00                  | 2392547 ± 0.01%            | 2398082                       | 2251817     |
+
 ### Summary
 
 | **Task Name**              | **Latency Improvement (%)** | **Throughput Improvement (%)** |
@@ -47,3 +62,12 @@ To get the same version that I am using, look into the `.prototools` file.
 | deepEqual - nested         | 5.44% faster                | 10.18% higher                  |
 | deepEqual - simple         | 7.24% faster                | 7.46% higher                   |
 | deepEqual - differentTypes | 2.14% faster                | 5.82% higher                   |
+
+| **Task Name**              | **Latency Improvement (%)** | **Throughput Improvement (%)** |
+| -------------------------- | --------------------------- | ------------------------------ |
+| mergeDeep - array          | 41.73% faster               | 76.67% higher                  |
+| mergeDeep - deepNested     | 5.93% faster                | 2.76% higher                   |
+| mergeDeep - large          | 83.38% faster               | 518.40% higher                 |
+| mergeDeep - nested         | 46.59% faster               | 86.97% higher                  |
+| mergeDeep - simple         | 55.72% faster               | 132.92% higher                 |
+| mergeDeep - differentTypes | 46.40% faster               | 89.42% higher                  |
