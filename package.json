@@ -1,0 +1,20 @@
+{
+  "name": "util-bench",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node dist/benchmark.js",
+    "lint": "biome check ."
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/node": "^22.10.7",
+    "tinybench": "^3.1.0",
+    "typescript": "^5.7.3"
+  }
+}
