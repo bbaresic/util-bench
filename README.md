@@ -20,7 +20,27 @@ To get the same version that I am using, look into the `.prototools` file.
 1. `npm i`
 2. `npm run start`
 
-## My Results (MacBook Pro M2)
+## Summary
+
+| **Task Name**              | **Latency Improvement (%)** | **Throughput Improvement (%)** |
+| -------------------------- | --------------------------- | ------------------------------ |
+| deepEqual - array          | 5.73% faster                | 5.66% higher                   |
+| deepEqual - deepNested     | 6.31% faster                | 7.29% higher                   |
+| deepEqual - large          | 3.92% faster                | 4.89% higher                   |
+| deepEqual - nested         | 5.44% faster                | 10.18% higher                  |
+| deepEqual - simple         | 7.24% faster                | 7.46% higher                   |
+| deepEqual - differentTypes | 2.14% faster                | 5.82% higher                   |
+
+| **Task Name**              | **Latency Improvement (%)** | **Throughput Improvement (%)** |
+| -------------------------- | --------------------------- | ------------------------------ |
+| mergeDeep - array          | 41.73% faster               | 76.67% higher                  |
+| mergeDeep - deepNested     | 5.93% faster                | 2.76% higher                   |
+| mergeDeep - large          | 83.38% faster               | 518.40% higher                 |
+| mergeDeep - nested         | 46.59% faster               | 86.97% higher                  |
+| mergeDeep - simple         | 55.72% faster               | 132.92% higher                 |
+| mergeDeep - differentTypes | 46.40% faster               | 89.42% higher                  |
+
+## Results (MacBook Pro M2)
 
 | **Task Name**                 | **Latency Avg (ns)** | **Latency Median (ns)** | **Throughput Avg (ops/s)** | **Throughput Median (ops/s)** | **Samples** |
 | ----------------------------- | -------------------- | ----------------------- | -------------------------- | ----------------------------- | ----------- |
@@ -51,23 +71,3 @@ To get the same version that I am using, look into the `.prototools` file.
 | mergeDeep - simple            | 358.76 ± 0.38%       | 333.00                  | 2961781 ± 0.01%            | 3003003                       | 2787397     |
 | mergeDeepOld - differentTypes | 829.02 ± 0.45%       | 791.00                  | 1263291 ± 0.01%            | 1264222                       | 1206249     |
 | mergeDeep - differentTypes    | 444.14 ± 0.52%       | 417.00                  | 2392547 ± 0.01%            | 2398082                       | 2251817     |
-
-### Summary
-
-| **Task Name**              | **Latency Improvement (%)** | **Throughput Improvement (%)** |
-| -------------------------- | --------------------------- | ------------------------------ |
-| deepEqual - array          | 5.73% faster                | 5.66% higher                   |
-| deepEqual - deepNested     | 6.31% faster                | 7.29% higher                   |
-| deepEqual - large          | 3.92% faster                | 4.89% higher                   |
-| deepEqual - nested         | 5.44% faster                | 10.18% higher                  |
-| deepEqual - simple         | 7.24% faster                | 7.46% higher                   |
-| deepEqual - differentTypes | 2.14% faster                | 5.82% higher                   |
-
-| **Task Name**              | **Latency Improvement (%)** | **Throughput Improvement (%)** |
-| -------------------------- | --------------------------- | ------------------------------ |
-| mergeDeep - array          | 41.73% faster               | 76.67% higher                  |
-| mergeDeep - deepNested     | 5.93% faster                | 2.76% higher                   |
-| mergeDeep - large          | 83.38% faster               | 518.40% higher                 |
-| mergeDeep - nested         | 46.59% faster               | 86.97% higher                  |
-| mergeDeep - simple         | 55.72% faster               | 132.92% higher                 |
-| mergeDeep - differentTypes | 46.40% faster               | 89.42% higher                  |
