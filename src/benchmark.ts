@@ -72,10 +72,10 @@ const benchMergeDeep = new Bench({ time: 1000, iterations: 100 });
       mergeDeep(deepNested[0], deepNested[1]);
     })
     .add("mergeDeepOld - large", () => {
-      mergeDeepOld(largeCopy[0], largeCopy[1]);
+      mergeDeepOld(largeCopy[0], largeCopy[2]);
     })
     .add("mergeDeep - large", () => {
-      mergeDeep(large[0], large[1]);
+      mergeDeep(large[0], large[2]);
     })
     .add("mergeDeepOld - nested", () => {
       mergeDeepOld(nestedCopy[0], nestedCopy[1]);
