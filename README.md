@@ -33,12 +33,12 @@ To get the same version that I am using, look into the `.prototools` file.
 
 | **Task Name**              | **Latency Improvement (%)** | **Throughput Improvement (%)** |
 | -------------------------- | --------------------------- | ------------------------------ |
-| mergeDeep - array          | 43.05% faster               | 78.38% higher                  |
-| mergeDeep - deepNested     | 6.79% faster                | 6.69% higher                   |
-| mergeDeep - large          | 77.70% faster               | 423.83% higher                 |
-| mergeDeep - nested         | 44.78% faster               | 82.66% higher                  |
-| mergeDeep - simple         | 55.16% faster               | 133.14% higher                 |
-| mergeDeep - differentTypes | 45.06% faster               | 97.81% higher                  |
+| mergeDeep - array          | 43.60% faster               | 88.39% higher                  |
+| mergeDeep - deepNested     | 9.58% faster                | 9.52% higher                   |
+| mergeDeep - large          | 79.87% faster               | 398.09% higher                 |
+| mergeDeep - nested         | 43.05% faster               | 80.61% higher                  |
+| mergeDeep - simple         | 53.14% faster               | 114.22% higher                 |
+| mergeDeep - differentTypes | 52.47% faster               | 117.37% higher                 |
 
 ## Results (MacBook Pro M2)
 
@@ -59,15 +59,15 @@ To get the same version that I am using, look into the `.prototools` file.
 
 | **Task Name**                 | **Latency Avg (ns)** | **Latency Median (ns)** | **Throughput Avg (ops/s)** | **Throughput Median (ops/s)** | **Samples** |
 | ----------------------------- | -------------------- | ----------------------- | -------------------------- | ----------------------------- | ----------- |
-| mergeDeepOld - array          | 553.52 ± 0.35%       | 500.00                  | 1907469 ± 0.01%            | 2000000                       | 1806630     |
-| mergeDeep - array             | 315.16 ± 0.43%       | 292.00                  | 3401842 ± 0.01%            | 3424658                       | 3172961     |
-| mergeDeepOld - deepNested     | 1724.80 ± 0.36%      | 1625.00                 | 607658 ± 0.02%             | 615385                        | 579777      |
-| mergeDeep - deepNested        | 1607.67 ± 0.39%      | 1500.00                 | 648316 ± 0.02%             | 666667                        | 622020      |
-| mergeDeepOld - large          | 459869.37 ± 0.42%    | 442584.00               | 2190 ± 0.31%               | 2259                          | 2175        |
-| mergeDeep - large             | 102611.95 ± 1.94%    | 90416.00                | 10471 ± 0.27%              | 11060                         | 9746        |
-| mergeDeepOld - nested         | 1989.54 ± 0.47%      | 1875.00                 | 525477 ± 0.02%             | 533333                        | 502628      |
-| mergeDeep - nested            | 1098.50 ± 0.50%      | 1000.00                 | 959857 ± 0.02%             | 1000000                       | 910329      |
-| mergeDeepOld - simple         | 805.80 ± 0.16%       | 791.00                  | 1274497 ± 0.01%            | 1264223                       | 1241002     |
-| mergeDeep - simple            | 361.37 ± 0.69%       | 333.00                  | 2971591 ± 0.01%            | 3003003                       | 2767816     |
-| mergeDeepOld - differentTypes | 911.57 ± 0.85%       | 833.00                  | 1173979 ± 0.01%            | 1200480                       | 1097003     |
-| mergeDeep - differentTypes    | 501.05 ± 1.39%       | 417.00                  | 2322127 ± 0.01%            | 2398082                       | 1995823     |
+| mergeDeepOld - array          | 529.10 ± 0.51%       | 500.00                  | 2,003,018 ± 0.01%          | 2,000,000                     | 1,889,987   |
+| mergeDeep - array             | 298.37 ± 0.89%       | 250.00                  | 3,774,086 ± 0.01%          | 4,000,000                     | 3,351,549   |
+| mergeDeepOld - deepNested     | 1,734.54 ± 0.68%     | 1,584.00                | 609,032 ± 0.02%            | 631,313                       | 576,524     |
+| mergeDeep - deepNested        | 1,568.35 ± 1.03%     | 1,459.00                | 666,896 ± 0.02%            | 685,401                       | 637,615     |
+| mergeDeepOld - large          | 442,580.57 ± 0.33%   | 431,583.00              | 2,270 ± 0.25%              | 2,317                         | 2,260       |
+| mergeDeep - large             | 89,096.28 ± 0.23%    | 86,792.00               | 11,308 ± 0.12%             | 11,522                        | 11,224      |
+| mergeDeepOld - nested         | 1,856.51 ± 0.20%     | 1,792.00                | 547,660 ± 0.01%            | 558,036                       | 538,647     |
+| mergeDeep - nested            | 1,057.30 ± 0.38%     | 1,000.00                | 989,265 ± 0.02%            | 1,000,000                     | 945,807     |
+| mergeDeepOld - simple         | 727.28 ± 0.31%       | 667.00                  | 1,437,291 ± 0.01%          | 1,499,250                     | 1,374,987   |
+| mergeDeep - simple            | 340.86 ± 0.40%       | 333.00                  | 3,077,178 ± 0.01%          | 3,003,003                     | 2,933,739   |
+| mergeDeepOld - differentTypes | 801.65 ± 0.41%       | 750.00                  | 1,308,982 ± 0.02%          | 1,333,333                     | 1,247,430   |
+| mergeDeep - differentTypes    | 381.00 ± 0.94%       | 334.00                  | 2,846,617 ± 0.01%          | 2,994,012                     | 2,624,642   |

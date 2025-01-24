@@ -33,7 +33,15 @@ export function mergeDeep(target, ...sources) {
                 if (!isPlainObject(targetValue)) target[key] = {};
                 mergeDeep(target[key], sourceValue);
             } else if (Array.isArray(sourceValue)) {
-                target[key] = Array.from(new Set([...(Array.isArray(targetValue) ? targetValue : []), ...sourceValue]));
+                if (!Array.isArray(targetValue)) {
+                    target[key] = [...sourceValue];
+                } else {
+                    for (const item of sourceValue) {
+                        if (!targetValue.some(existingItem => deepEqual(existingItem, item))) {
+                            targetValue.push(item);
+                        }
+                    }
+                }
             } else {
                 target[key] = sourceValue;
             }
