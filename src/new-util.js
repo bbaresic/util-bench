@@ -1,4 +1,4 @@
-import { isPlainObject } from './util-imports.js';
+import { isPlainObject, isArray } from './util-imports.js';
 
 export function deepEqual(obj1, obj2, { checkTypes = false } = {}) {
     if (obj1 === obj2) return true;
@@ -24,19 +24,25 @@ export function deepEqual(obj1, obj2, { checkTypes = false } = {}) {
 
 export function mergeDeep(target, ...sources) {
     if (!sources.length) return target;
-    for (const source of sources) {
+    for (let i = 0; i < sources.length; i++) {
+        const source = sources[i];
         if (!isPlainObject(target) || !isPlainObject(source)) continue;
-        for (const key of Object.keys(source)) {
+        const keys = Object.keys(source);
+
+        for (let j = 0; j < keys.length; j++) {
+            const key = keys[j];
             const sourceValue = source[key];
             const targetValue = target[key];
+
             if (isPlainObject(sourceValue)) {
                 if (!isPlainObject(targetValue)) target[key] = {};
                 mergeDeep(target[key], sourceValue);
-            } else if (Array.isArray(sourceValue)) {
-                if (!Array.isArray(targetValue)) {
+            } else if (isArray(sourceValue)) {
+                if (!isArray(targetValue)) {
                     target[key] = [...sourceValue];
                 } else {
-                    for (const item of sourceValue) {
+                    for (let k = 0; k < sourceValue.length; k++) {
+                        const item = sourceValue[k];
                         if (!targetValue.some(existingItem => deepEqual(existingItem, item))) {
                             targetValue.push(item);
                         }
@@ -47,5 +53,6 @@ export function mergeDeep(target, ...sources) {
             }
         }
     }
+
     return target;
 }

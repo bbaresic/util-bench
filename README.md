@@ -25,50 +25,51 @@ To get the same version that I am using, look into the `.prototools` file.
 
 | Task name                  | Latency Improvement (%) | Throughput Improvement (%) |
 | :------------------------- | :---------------------- | :------------------------- |
-| deepEqual - array          | -3.54% improvement      | +3.73% improvement         |
-| deepEqual - deepNested     | -13.50% improvement     | +12.37% improvement        |
-| deepEqual - large          | -6.65% improvement      | +6.74% improvement         |
-| deepEqual - nested         | -8.04% improvement      | +10.83% improvement        |
-| deepEqual - simple         | -7.95% improvement      | +6.39% improvement         |
-| deepEqual - differentTypes | -5.70% improvement      | +6.32% improvement         |
+| deepEqual - array          | -9.23% improvement      | +8.50% improvement         |
+| deepEqual - deepNested     | -9.08% improvement      | +11.59% improvement        |
+| deepEqual - large          | -5.92% improvement      | +8.42% improvement         |
+| deepEqual - nested         | -10.85% improvement     | +13.85% improvement        |
+| deepEqual - simple         | -18.99% improvement     | +17.45% improvement        |
+| deepEqual - differentTypes | -9.44% improvement      | +10.17% improvement        |
 
 | Task name                  | Latency Improvement (%) | Throughput Improvement (%) |
 | :------------------------- | :---------------------- | :------------------------- |
-| mergeDeep - array          | -45.63% improvement     | +89.51% improvement        |
-| mergeDeep - deepNested     | -13.08% improvement     | +11.02% improvement        |
-| mergeDeep - large          | -79.25% improvement     | +385.26% improvement       |
-| mergeDeep - nested         | -44.77% improvement     | +80.33% improvement        |
-| mergeDeep - simple         | -55.16% improvement     | +131.13% improvement       |
-| mergeDeep - differentTypes | -56.45% improvement     | +137.66% improvement       |
+| mergeDeep - array          | -40.10% improvement     | +83.07% improvement        |
+| mergeDeep - deepNested     | -7.84% improvement      | +8.12% improvement         |
+| mergeDeep - large          | -80.00% improvement     | +395.95% improvement       |
+| mergeDeep - nested         | -46.51% improvement     | +85.18% improvement        |
+| mergeDeep - simple         | -58.41% improvement     | +132.15% improvement       |
+| mergeDeep - differentTypes | -56.36% improvement     | +138.65% improvement       |
+
 
 ## Results (MacBook Pro M2)
 
-| Task name                     | Latency average (ns) | Latency median (ns) | Throughput average (ops/s) | Throughput median (ops/s) | Samples  |
-| :---------------------------- | :------------------- | :------------------ | :------------------------- | :------------------------ | :------- |
-| deepEqualOld - array          | 331.43 ± 0.28%       | 333.00              | 3135562 ± 0.01%            | 3003003                   | 3017244  |
-| deepEqual - array             | 319.69 ± 0.30%       | 292.00              | 3252460 ± 0.01%            | 3424658                   | 3128062  |
-| deepEqualOld - deepNested     | 287.61 ± 0.45%       | 250.00              | 3779989 ± 0.01%            | 4000000                   | 3476986  |
-| deepEqual - deepNested        | 248.77 ± 0.36%       | 250.00              | 4247397 ± 0.01%            | 4000000                   | 4019730  |
-| deepEqualOld - large          | 55271.16 ± 0.26%     | 53000.00            | 18323 ± 0.12%              | 18868                     | 18093    |
-| deepEqual - large             | 51595.76 ± 0.22%     | 50166.00            | 19558 ± 0.09%              | 19934                     | 19382    |
-| deepEqualOld - nested         | 224.90 ± 0.43%       | 208.00              | 4710558 ± 0.01%            | 4807692                   | 4446323  |
-| deepEqual - nested            | 206.82 ± 1.97%       | 208.00              | 5220827 ± 0.01%            | 4807692                   | 4835107  |
-| deepEqualOld - simple         | 105.41 ± 2.47%       | 84.00               | 10232723 ± 0.01%           | 11904762                  | 9487104  |
-| deepEqual - simple            | 97.03 ± 0.12%        | 84.00               | 10886491 ± 0.01%           | 11904762                  | 10306033 |
-| deepEqualOld - differentTypes | 286.46 ± 0.25%       | 291.00              | 3597831 ± 0.01%            | 3436426                   | 3490926  |
-| deepEqual - differentTypes    | 270.13 ± 0.33%       | 250.00              | 3825171 ± 0.01%            | 4000000                   | 3701909  |
+| Task name                     | Latency average (ns) | Latency median (ns) | Throughput average (ops/s) | Throughput median (ops/s) | Samples |
+| :---------------------------- | :------------------- | :------------------ | :------------------------- | :------------------------ | :------ |
+| deepEqualOld - array          | 389.94 ± 0.40%       | 375.00              | 2724953 ± 0.01%            | 2666667                   | 2564480 |
+| deepEqual - array             | 353.95 ± 0.33%       | 333.00              | 2956457 ± 0.01%            | 3003003                   | 2825294 |
+| deepEqualOld - deepNested     | 307.19 ± 1.05%       | 292.00              | 3434427 ± 0.01%            | 3424658                   | 3255357 |
+| deepEqual - deepNested        | 279.29 ± 0.36%       | 250.00              | 3832571 ± 0.01%            | 4000000                   | 3580542 |
+| deepEqualOld - large          | 59214.79 ± 0.60%     | 55750.00            | 17371 ± 0.15%              | 17937                     | 16888   |
+| deepEqual - large             | 55710.91 ± 0.89%     | 51541.00            | 18834 ± 0.16%              | 19402                     | 17950   |
+| deepEqualOld - nested         | 280.73 ± 0.46%       | 250.00              | 3777229 ± 0.01%            | 4000000                   | 3562130 |
+| deepEqual - nested            | 250.28 ± 0.47%       | 250.00              | 4300209 ± 0.01%            | 4000000                   | 3995558 |
+| deepEqualOld - simple         | 149.33 ± 2.40%       | 125.00              | 7661044 ± 0.01%            | 8000000                   | 6696466 |
+| deepEqual - simple            | 120.98 ± 0.40%       | 125.00              | 8998020 ± 0.01%            | 8000000                   | 8265833 |
+| deepEqualOld - differentTypes | 337.18 ± 0.28%       | 333.00              | 3063344 ± 0.01%            | 3003003                   | 2965802 |
+| deepEqual - differentTypes    | 305.35 ± 0.18%       | 292.00              | 3374887 ± 0.01%            | 3424658                   | 3274944 |
 
 | Task name                     | Latency average (ns) | Latency median (ns) | Throughput average (ops/s) | Throughput median (ops/s) | Samples |
 | :---------------------------- | :------------------- | :------------------ | :------------------------- | :------------------------ | :------ |
-| mergeDeepOld - array          | 531.02 ± 0.42%       | 500.00              | 1987906 ± 0.01%            | 2000000                   | 1883183 |
-| mergeDeep - array             | 288.71 ± 0.65%       | 250.00              | 3767291 ± 0.01%            | 4000000                   | 3463626 |
-| mergeDeepOld - deepNested     | 1734.54 ± 0.77%      | 1584.00             | 613841 ± 0.02%             | 631313                    | 576521  |
-| mergeDeep - deepNested        | 1507.74 ± 0.25%      | 1458.00             | 681495 ± 0.02%             | 685871                    | 663243  |
-| mergeDeepOld - large          | 431601.73 ± 0.20%    | 427334.00           | 2321 ± 0.14%               | 2340                      | 2317    |
-| mergeDeep - large             | 89550.51 ± 0.25%     | 87166.00            | 11263 ± 0.13%              | 11472                     | 11167   |
-| mergeDeepOld - nested         | 1846.04 ± 0.24%      | 1792.00             | 555216 ± 0.02%             | 558036                    | 541702  |
-| mergeDeep - nested            | 1019.51 ± 0.21%      | 1000.00             | 1001240 ± 0.01%            | 1000000                   | 980860  |
-| mergeDeepOld - simple         | 749.63 ± 0.05%       | 750.00              | 1345391 ± 0.01%            | 1333333                   | 1333984 |
-| mergeDeep - simple            | 336.15 ± 0.43%       | 333.00              | 3109569 ± 0.01%            | 3003003                   | 2974851 |
-| mergeDeepOld - differentTypes | 844.27 ± 0.46%       | 792.00              | 1226639 ± 0.01%            | 1262626                   | 1184451 |
-| mergeDeep - differentTypes    | 367.67 ± 0.71%       | 333.00              | 2915247 ± 0.01%            | 3003003                   | 2719795 |
+| mergeDeepOld - array          | 540.44 ± 0.59%       | 500.00              | 1972887 ± 0.01%            | 2000000                   | 1850578 |
+| mergeDeep - array             | 323.70 ± 1.18%       | 291.00              | 3611748 ± 0.01%            | 3436426                   | 3089913 |
+| mergeDeepOld - deepNested     | 1705.74 ± 0.34%      | 1625.00             | 610094 ± 0.02%             | 615385                    | 586256  |
+| mergeDeep - deepNested        | 1572.03 ± 0.35%      | 1500.00             | 659664 ± 0.02%             | 666667                    | 636119  |
+| mergeDeepOld - large          | 464709.40 ± 1.25%    | 439958.00           | 2204 ± 0.41%               | 2273                      | 2152    |
+| mergeDeep - large             | 92962.00 ± 0.41%     | 89000.00            | 10931 ± 0.16%              | 11236                     | 10758   |
+| mergeDeepOld - nested         | 1959.30 ± 0.47%      | 1875.00             | 528007 ± 0.02%             | 533333                    | 510387  |
+| mergeDeep - nested            | 1048.11 ± 0.31%      | 1000.00             | 977743 ± 0.01%             | 1000000                   | 954098  |
+| mergeDeepOld - simple         | 863.15 ± 3.61%       | 791.00              | 1274121 ± 0.02%            | 1264223                   | 1158542 |
+| mergeDeep - simple            | 358.97 ± 0.60%       | 333.00              | 2957820 ± 0.01%            | 3003003                   | 2785757 |
+| mergeDeepOld - differentTypes | 913.25 ± 0.89%       | 834.00              | 1167189 ± 0.01%            | 1199041                   | 1094986 |
+| mergeDeep - differentTypes    | 398.50 ± 1.01%       | 375.00              | 2785454 ± 0.01%            | 2666667                   | 2509735 |
